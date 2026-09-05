@@ -1,9 +1,26 @@
 <script setup lang="ts">
-import type { CmsGroupsBlock } from '~/types/cms'
+interface GroupItem {
+  id: string
+  group: 'woelfling' | 'jungpfadfinder' | 'pfadfinder' | 'rover'
+  title: string
+  description: string
+  ageGroup: string
+  meetingTime: string
+}
 
 defineProps<{
-  block: CmsGroupsBlock
+  block: {
+    title: string
+    groups: GroupItem[]
+  }
 }>()
+
+const getGroupStyle = (level: GroupItem['group']) => {
+  return {
+    borderColor: `var(--color-stufen-${level})`,
+    color: `var(--color-stufen-${level})`
+  }
+}
 </script>
 
 <template>
@@ -15,7 +32,7 @@ defineProps<{
         v-for="group in block.groups"
         :key="group.id"
         class="border-t-4 transition-all hover:shadow-lg"
-        :class="group.colorClass"
+        :style="getGroupStyle(group.group)"
       >
         <template #header>
           <div class="flex items-center justify-between">

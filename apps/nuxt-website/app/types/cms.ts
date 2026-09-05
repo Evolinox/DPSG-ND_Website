@@ -69,10 +69,10 @@ export interface CmsGroupsBlock {
   groups: {
     id: string
     title: string
+    group: string
     ageGroup: string
     description: string
     meetingTime: string
-    colorClass: string
   }[]
 }
 

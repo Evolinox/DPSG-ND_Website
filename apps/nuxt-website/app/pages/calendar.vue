@@ -3,18 +3,9 @@
 import type { CmsBlockData } from '~/types/cms'
 
 // fetch cms data
-const { data: page } = await useAsyncData<CmsBlockData>('calendar-data', async () => {
-  return {
-    blocks: [
-      {
-        type: 'header',
-        id: 'website-header',
-        title: 'Kalender',
-        description: 'Hier findet ihr bald all unsere Termine!'
-      }
-    ]
-  }
-})
+const { data: page } = await useAsyncData<CmsBlockData>('calendar-page', () =>
+  $fetch('/api/pages/calendar')
+)
 </script>
 
 <template>

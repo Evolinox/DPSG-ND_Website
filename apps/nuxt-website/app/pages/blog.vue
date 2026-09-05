@@ -3,18 +3,9 @@
 import type { CmsBlockData } from '~/types/cms'
 
 // fetch cms data
-const { data: page } = await useAsyncData<CmsBlockData>('blog-data', async () => {
-  return {
-    blocks: [
-      {
-        type: 'header',
-        id: 'blog-header',
-        title: 'Blog',
-        description: 'Hier findet ihr bald all unsere Termine!',
-      }
-    ]
-  }
-})
+const { data: page } = await useAsyncData<CmsBlockData>('blog-page', () =>
+  $fetch('/api/pages/blog')
+)
 </script>
 
 <template>
