@@ -1,0 +1,37 @@
+<script setup lang="ts">
+import type { CmsGroupsBlock } from '~/types/cms'
+
+defineProps<{
+  block: CmsGroupsBlock
+}>()
+</script>
+
+<template>
+  <section class="space-y-6">
+    <h2 class="text-2xl font-bold">{{ block.title }}</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <UCard
+        v-for="group in block.groups"
+        :key="group.id"
+        class="border-t-4 transition-all hover:shadow-lg"
+        :class="group.colorClass"
+      >
+        <template #header>
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-lg">{{ group.title }}</h3>
+            <UBadge variant="soft" color="neutral" size="xs">{{ group.ageGroup }}</UBadge>
+          </div>
+        </template>
+
+        <p class="text-sm text-neutral-600 dark:text-neutral-300">
+          {{ group.description }}
+        </p>
+
+        <template #footer>
+          <span class="text-xs text-neutral-500 font-medium">{{ group.meetingTime }}</span>
+        </template>
+      </UCard>
+    </div>
+  </section>
+</template>

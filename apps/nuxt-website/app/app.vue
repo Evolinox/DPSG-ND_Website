@@ -1,4 +1,6 @@
 <script setup>
+import AppNavigation from "~/components/AppNavigation.vue";
+
 useHead({
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
@@ -26,46 +28,31 @@ useSeoMeta({
   <UApp>
     <UHeader>
       <template #left>
-        <NuxtLink
-          to="/"
-          class="focus-visible:outline-3 outline-primary/25 rounded-md p-1 -ms-1"
-        >
-          <AppLogo class="w-auto h-6 shrink-0" />
-        </NuxtLink>
-
-        <TemplateMenu />
+        <AppLogo />
       </template>
-
       <template #right>
-        <UColorModeButton />
-
-        <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
-          target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
-          color="neutral"
-          variant="ghost"
-        />
+        <AppNavigation />
       </template>
     </UHeader>
 
     <UMain>
-      <NuxtPage />
+      <UContainer>
+        <NuxtPage />
+      </UContainer>
     </UMain>
 
-    <USeparator icon="i-simple-icons-nuxtdotjs" />
+    <USeparator icon="i-lucide-tent" />
 
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          Built with Nuxt UI • © {{ new Date().getFullYear() }}
+          DPSG Neckarelz-Diedesheim • © {{ new Date().getFullYear() }}
         </p>
       </template>
 
       <template #right>
         <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
+          to="https://github.com/Evolinox/DPSG-ND_Website"
           target="_blank"
           icon="i-simple-icons-github"
           aria-label="GitHub"

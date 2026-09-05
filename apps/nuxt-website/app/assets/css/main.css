@@ -4,15 +4,20 @@
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+  --color-primary-50: #f2f7fd;
+  --color-primary-100: #e5edf9;
+  --color-primary-200: #c4dbf3;
+  --color-primary-300: #90bde9;
+  --color-primary-400: #559adb;
+  --color-primary-500: #2f7ec8;
+  --color-primary-600: #1d5a9b;
+  --color-primary-700: #1b4f89;
+  --color-primary-800: #1a4472;
+  --color-primary-900: #1b3a5f;
+  --color-primary-950: #12253f;
+
+  --color-stufen-woelfling: #F58220;
+  --color-stufen-jungpfadfinder: #009EE3;
+  --color-stufen-pfadfinder: #009640;
+  --color-stufen-rover: #E30613;
 }
