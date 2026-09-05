@@ -1,0 +1,9 @@
+{
+  "name": "verein-monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:website": "pnpm --filter nuxt-website dev",
+    "build:website": "pnpm --filter nuxt-website build"
+  }
+}
