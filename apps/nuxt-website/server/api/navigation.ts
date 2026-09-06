@@ -6,6 +6,32 @@ export default defineEventHandler((): CmsNavigationItem[] => {
     { id: '1', label: 'Blog', to: '/blog' },
     { id: '2', label: 'Kalender', to: '/calendar' },
     { id: '3', label: 'Webshop', to: 'https://dpsg-nd.myspreadshop.de', target: '_blank' },
-    { id: '4', label: 'Stamm', to: '/about' },
+    {
+      id: 'stamm_index',
+      label: 'Stamm',
+      to: '/stamm',
+      children: [
+        {
+          id: 'stamm_leitung',
+          label: 'Leitungsteam',
+          to: '/stamm/leitung',
+        },
+        {
+          id: 'stamm_gruppenraum',
+          label: 'Gruppenräume',
+          to: '/stamm/gruppenraum',
+        },
+        {
+          id: 'stamm_ev',
+          label: 'Förderverein',
+          to: '/stamm/ev',
+        },
+        {
+          id: 'stamm_bz',
+          label: 'Bezirk',
+          to: '/stamm/bezirk',
+        },
+      ]
+    },
   ]
 })

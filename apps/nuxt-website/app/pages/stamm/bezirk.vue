@@ -1,10 +1,10 @@
-<!-- apps/nuxt-website/pages/about/index.vue -->
+<!-- apps/nuxt-website/pages/stamm/bezirk.vue -->
 <script setup lang="ts">
 import type { CmsBlockData } from '~/types/cms'
 
 // fetch cms data
-const { data: page } = await useAsyncData<CmsBlockData>('about-page', () =>
-  $fetch('/api/pages/about/us')
+const { data: page } = await useAsyncData<CmsBlockData>('bezirk-page', () =>
+  $fetch('/api/pages/stamm/bezirk')
 )
 </script>
 
