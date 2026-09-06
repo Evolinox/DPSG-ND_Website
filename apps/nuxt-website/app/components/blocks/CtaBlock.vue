@@ -13,14 +13,15 @@ defineProps<{
     :orientation="block.orientation || 'horizontal'"
     :reverse="block.reverse"
     :links="block.links"
+    :variant="block.variant"
   >
     <img
       v-if="block.imageUrl"
       :src="block.imageUrl"
       width="320"
-      height="364"
+      height="320"
       :alt="block.imageAlt || ''"
-      class="w-full rounded-lg object-cover shadow-md"
+      class="w-full h-full rounded-lg object-cover shadow-md"
       loading="lazy"
     />
   </UPageCTA>

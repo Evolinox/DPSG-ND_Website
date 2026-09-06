@@ -83,6 +83,7 @@ export interface CmsCtaBlock {
   id: string
   title: string
   description: string
+  variant?: 'soft' | 'subtle'
   imageUrl?: string
   imageAlt?: string
   orientation?: 'horizontal' | 'vertical'
