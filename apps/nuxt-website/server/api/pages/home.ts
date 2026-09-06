@@ -18,6 +18,7 @@ export default defineEventHandler((): CmsBlockData => {
         type: 'groups',
         id: 'stufen-overview',
         title: 'Unsere Stufen',
+        description: 'Die Gruppenstunden finden das ganze Jahr über um die gleiche Zeit statt, außer in den Ferien.',
         groups: [
           {
             id: 'woelflinge',

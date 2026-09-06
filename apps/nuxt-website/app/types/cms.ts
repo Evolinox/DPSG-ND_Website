@@ -66,6 +66,7 @@ export interface CmsGroupsBlock {
   type: 'groups'
   id: string
   title: string
+  description?: string
   groups: {
     id: string
     title: string

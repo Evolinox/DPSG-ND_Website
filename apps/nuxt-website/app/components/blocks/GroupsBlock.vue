@@ -11,6 +11,7 @@ interface GroupItem {
 defineProps<{
   block: {
     title: string
+    description?: string
     groups: GroupItem[]
   }
 }>()
@@ -25,7 +26,11 @@ const getGroupStyle = (level: GroupItem['group']) => {
 
 <template>
   <section class="space-y-6">
-    <h2 class="text-2xl font-bold">{{ block.title }}</h2>
+    <UPageHeader
+      :title="block.title"
+      :description="block.description"
+      class="border-none p-0"
+    />
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       <UCard
