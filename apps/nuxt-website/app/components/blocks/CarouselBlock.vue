@@ -18,8 +18,8 @@ defineProps<{
 
     <UCarousel
       v-slot="{ item, index }"
-      arrows
       dots
+      :autoplay="{ delay: 10000 }"
       align="center"
       :items="block.items"
       :ui="{
