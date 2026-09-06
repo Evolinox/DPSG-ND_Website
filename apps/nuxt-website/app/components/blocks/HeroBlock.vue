@@ -17,14 +17,18 @@ defineProps<{
       class="absolute inset-0 w-full h-full object-cover z-0"
     />
 
-    <!-- Dunkles Overlay für optimale Lesbarkeit -->
+    <!-- Overlay -->
     <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/50 to-neutral-950/30 z-10" />
 
-    <!-- Hero Content (über dem Bild gelagert durch z-20) -->
+    <!-- Hero Content -->
     <UPageHero
       :title="block.title"
       :description="block.description"
       class="relative z-20 text-white"
+      :ui="{
+        title: 'text-white font-bold',
+        description: 'text-neutral-200'
+      }"
     />
   </div>
 </template>
