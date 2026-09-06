@@ -14,11 +14,42 @@ export interface CmsNavigationItem {
 }
 
 /*
+Link Item
+ */
+export interface CmsLinkItem {
+  id: string
+  label: string
+  to?: string
+  target?: '_blank' | '_self'
+}
+
+/*
 Image Item
  */
 export interface CmsImageItem {
   src: string
   alt: string
+}
+
+export interface CmsCarouselItem {
+  id: string
+  title: string
+  description: string
+  date: string
+  to: string
+  image: CmsImageItem
+}
+
+/*
+Carousel Block
+ */
+export interface CmsCarouselBlock {
+  type: 'carousel'
+  id: string
+  title: string
+  description?: string
+  links?: CmsLinkItem[]
+  items: CmsCarouselItem[]
 }
 
 /*
@@ -77,7 +108,7 @@ export interface CmsGroupsBlock {
   }[]
 }
 
-export type CmsBlock = CmsCtaBlock | CmsGroupsBlock | CmsHeaderBlock | CmsHeroBlock
+export type CmsBlock = CmsCarouselBlock | CmsCtaBlock | CmsGroupsBlock | CmsHeaderBlock | CmsHeroBlock
 
 export interface CmsBlockData {
   blocks: CmsBlock[]

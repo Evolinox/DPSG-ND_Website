@@ -7,11 +7,13 @@ import HeaderBlock from '~/components/blocks/HeaderBlock.vue'
 import CtaBlock from '~/components/blocks/CtaBlock.vue'
 import GroupsBlock from '~/components/blocks/GroupsBlock.vue'
 import HeroBlock from "~/components/blocks/HeroBlock.vue";
+import CarouselBlock from "~/components/blocks/CarouselBlock.vue";
 
 /*
 Hier werden alle Block Komponenten registriert
  */
 const blockComponents: Record<string, Component> = {
+  carousel: CarouselBlock,
   hero: HeroBlock,
   header: HeaderBlock,
   cta: CtaBlock,

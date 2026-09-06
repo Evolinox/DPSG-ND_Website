@@ -15,6 +15,47 @@ export default defineEventHandler((): CmsBlockData => {
         }
       },
       {
+        type: 'carousel',
+        id: 'last_actions',
+        title: 'Letzte Aktionen',
+        description: 'Diese Aktionen hatten wir in letzter Zeit, lest gerne die Blogeinträge dazu!',
+        items: [
+          {
+            id: 'pizza-nizza-2026',
+            title: 'Auf eine Pizza in Nizza',
+            description: 'Wer hat schon mal eine Pizza gegessen und war dabei in Nizza? :P',
+            date: '2026-05-12',
+            to: '/blog/pizza-nizza-2026',
+            image: {
+              src: '/images/IMG_9654.jpeg',
+              alt: 'test'
+            }
+          },
+          {
+            id: 'sola-2026',
+            title: 'Bezirkssommerlager in Dittwar',
+            description: '',
+            date: '2026-08-02',
+            to: '/blog/bezirks-sommerlager-2026',
+            image: {
+              src: 'https://picsum.photos/1280/720?random=2',
+              alt: 'test'
+            }
+          },
+          {
+            id: 'eberstadt-2026',
+            title: 'Ausflug in die Tropfsteinhöhle',
+            description: '',
+            date: '2026-04-04',
+            to: '/blog/eberstadt-2026',
+            image: {
+              src: 'https://picsum.photos/1280/720?random=3',
+              alt: 'test'
+            }
+          }
+        ]
+      },
+      {
         type: 'groups',
         id: 'stufen-overview',
         title: 'Unsere Stufen',
