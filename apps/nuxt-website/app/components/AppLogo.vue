@@ -13,7 +13,7 @@
         DPSG Neckarelz-Diedesheim
       </span>
 
-      <span class="text-xs font-medium text-[var(--ui-text-muted)]">
+      <span class="hidden sm:block text-xs font-medium text-[var(--ui-text-muted)]">
         Stamm Don Bosco
       </span>
     </div>

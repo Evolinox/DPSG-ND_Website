@@ -11,9 +11,5 @@ const { data: navigation } = await useAsyncData<CmsNavigationItem[]>('main-navig
 <template>
   <UNavigationMenu
     :items="navigation"
-    variant="pill"
-    color="primary"
   />
-
-  <UColorModeButton />
 </template>

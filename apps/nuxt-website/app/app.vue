@@ -26,12 +26,15 @@ useSeoMeta({
 
 <template>
   <UApp>
-    <UHeader>
-      <template #left>
+    <UHeader mode="slideover">
+      <template #title>
         <AppLogo />
       </template>
+
+      <AppNavigation />
+
       <template #right>
-        <AppNavigation />
+        <UColorModeButton />
       </template>
     </UHeader>
 
